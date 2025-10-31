@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 // 👇 CHANGE THIS if your backend runs on a non-standard port or needs a full URL in development (if using a proxy, `/api/import-logs` is enough)
-const API_URL = "http://localhost:5050/api/import-logs";
+const API_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/import-logs`;
 
 export default function ImportHistory() {
   const [logs, setLogs] = useState([]);
